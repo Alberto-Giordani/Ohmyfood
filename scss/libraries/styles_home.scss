@@ -1,0 +1,228 @@
+@use "root" as *;
+
+///// Général /////
+body {
+    margin: 0;
+}
+
+h2,
+h3,
+p {
+    font-family: $font-texte;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+
+///// Header /////
+.headPage {
+
+    &__logo {
+        @include display__center;
+        position: relative;
+        height: 63px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+
+        &--grand {
+            display: none;
+        }
+
+        &--petit {
+            width: 162px;
+        }
+    }
+
+    &__localisation {
+        @include display__center;
+        height: 50px;
+        background-color: $color-localisation;
+        font-family: $font-texte;
+        font-size: 1rem;
+        font-weight: 500;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+        & i {
+            margin-right: 17px;
+        }
+    }
+}
+
+
+///// Titre /////
+.titreFonctionnementWrapper {
+    margin: 0 1.25rem;
+}
+
+.titrePage {
+    margin: 2.438rem 0 6.563rem;
+    display: flex;
+    flex-direction: column;
+
+    &__titre {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 1.688rem;
+
+        & h2 {
+            min-width: 17.188rem;
+            min-height: 4.25rem;
+            margin: auto;
+        }
+
+        & p {
+            min-width: 19.688rem;
+            min-height: 2.875rem;
+            font-size: 1.125rem;
+            margin: auto;
+        }
+    }
+
+    &__explorer {
+        display: flex;
+        justify-content: center;
+
+        &--bouton {
+            width: 13.625rem;
+            height: 3.125rem;
+            @include bouton__couleur;
+            cursor: pointer;
+        }
+    }
+}
+
+
+///// Fonctionnement /////
+.fonctionnement {
+    margin-bottom: 7.625rem;
+
+    &__titre {
+        margin-bottom: 1.625rem;
+    }
+
+    &__explication {
+        display: flex;
+        flex-direction: column;
+        gap: 1.563rem;
+
+        &--part {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            min-width: 20.938rem;
+            position: relative;
+
+            &-bouton {
+                @include bouton__fonctionnement;
+
+                & .fa-solid {
+                    color: #7E7E7E;
+                }
+
+                & .fa-store {
+                    color: $color-primaire;
+                }
+            }
+
+            &-span {
+                @include span__fonctionnement;
+            }
+        }
+    }
+}
+
+
+///// Restaurants /////
+.resto {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0 1.063rem 4.125rem;
+    position: relative;
+    
+    &__titre {
+        margin: 0 0 1rem 0.188rem;
+    }
+
+    &__liste {
+        display: flex;
+        flex-direction: column;
+        gap: 1.875rem;
+
+        &--ligne {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &--card {
+            @include card__resto;
+        }
+
+        &--image {
+            height: 10.875rem;
+            overflow: hidden;
+            max-width: 100%;
+            position: relative;
+            border-radius: 0.938rem 0.938rem 0 0;
+
+            &-palette {
+                @include card__image;
+                top: -3.563rem;
+                left: -0.188rem;
+            }
+
+            &-note {
+                @include card__image;
+                top: -10rem;
+            }
+
+            &-ala {
+                @include card__image;
+                top: -4.5rem;
+            }
+
+            &-delice {
+                @include card__image;
+                top: -4rem;
+            }
+        }
+
+
+    }
+}
+
+.coeur {
+    display: none;
+
+    &:checked+.image1 {
+        opacity: 0;
+    }
+
+    &:checked+.image1+.image2 {
+        opacity: 1;
+    }
+}
+
+.image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease;
+
+    &2 {
+        opacity: 0;
+    }
+
+    &-container {
+        position: relative;
+        cursor: pointer;
+    }
+}
