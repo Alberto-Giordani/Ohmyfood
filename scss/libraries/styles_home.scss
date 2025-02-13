@@ -310,6 +310,7 @@ h3 {
     &--article {
         display: flex;
         flex-direction: row;
+        align-items: center;
         gap: 0.688rem;
     }
 }
