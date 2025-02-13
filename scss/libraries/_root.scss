@@ -1,12 +1,12 @@
-$font-titres: "Shrikhand", serif;
-$font-texte: "Roboto", serif;
+$font-titres: 'Shrikhand', serif;
+$font-texte: 'Roboto', serif;
 $color-primaire: #9356DC;
 $color-secondaire: #FF79DA;
 $color-tertiaire: #99E2D0;
 $color-localisation: #EAEAEA;
 $color-bouton-fonctionnement: #F6F6F6;
+$color-background-footer: #353535;
 $gradient-bouton-couleur: linear-gradient(0deg, $color-primaire, $color-secondaire);
-
 
 
 @mixin display__center {
@@ -25,8 +25,6 @@ $gradient-bouton-couleur: linear-gradient(0deg, $color-primaire, $color-secondai
     border-radius: 1.563rem;
     filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.25));
 }
-
-
 
 @mixin bouton__fonctionnement {
     display: flex;
@@ -66,12 +64,29 @@ $gradient-bouton-couleur: linear-gradient(0deg, $color-primaire, $color-secondai
     flex-direction: column;
     position: relative;
     width: 100%;
-    height: 15.688rem;
 }
 
 @mixin card__image {
     object-fit: cover;
     width: 100%;
-    height: auto;
+    height: 100%;
     position: absolute;
+}
+
+@mixin bouton__nouveau {
+    position: absolute;
+    font-family: $font-texte;
+    font-size: 0.875rem;
+    color: #008766;
+    line-height: 1.813rem;
+    text-align: center;
+    background-color: $color-tertiaire;
+    width: 5rem;
+    height: 1.813rem;
+    z-index: 1;
+    border-radius: 0.125rem;
+    top: 0.813rem;
+    right: 1.25rem;
+    bottom: 8.25rem;
+    border: none;
 }

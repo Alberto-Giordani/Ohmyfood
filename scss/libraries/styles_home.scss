@@ -144,10 +144,11 @@ h3 {
 .resto {
     display: flex;
     flex-direction: column;
-    max-width: 100%;
+    max-width: 30.625rem;
+    min-width: 21.188rem;
     margin: 0 1.063rem 4.125rem;
     position: relative;
-    
+
     &__titre {
         margin: 0 0 1rem 0.188rem;
     }
@@ -157,9 +158,15 @@ h3 {
         flex-direction: column;
         gap: 1.875rem;
 
+        & a {
+            text-decoration: none;
+        }
+
         &--ligne {
             display: flex;
             flex-direction: column;
+            margin-bottom: 0;
+            gap: 1.875rem;
         }
 
         &--card {
@@ -167,7 +174,7 @@ h3 {
         }
 
         &--image {
-            height: 10.875rem;
+            height: 11rem;
             overflow: hidden;
             max-width: 100%;
             position: relative;
@@ -175,54 +182,134 @@ h3 {
 
             &-palette {
                 @include card__image;
-                top: -3.563rem;
-                left: -0.188rem;
+                object-position: center 75%;
             }
 
             &-note {
                 @include card__image;
-                top: -10rem;
+                object-position: center 60%;
             }
 
             &-ala {
                 @include card__image;
-                top: -4.5rem;
+                object-position: center 80%;
             }
 
             &-delice {
                 @include card__image;
-                top: -4rem;
+                object-position: center 80%;
             }
         }
 
+        &--nouveau {
+            @include bouton__nouveau;
+        }
 
+        &--description {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+            height: 2.813rem;
+        }
+
+        &--nomEtLieu {
+            font-family: $font-texte;
+            color: black;
+
+            & h3 {
+                line-height: 1.25rem;
+                margin: 0 0 0.313rem 0;
+            }
+
+            & p {
+                font-size: 1.063rem;
+                font-weight: 300;
+                line-height: 1.5rem;
+                margin: 0;
+            }
+        }
+
+        &--favori {
+            color: #101010;
+            display: flex;
+
+            &-imageContainer {
+                position: relative;
+                padding-right: 0.563rem;
+                padding-bottom: 1.063rem;
+
+                & i {
+                    font-size: 1.375rem;
+                    transition: 0.5s ease-in-out;
+
+                    &:hover {
+                        opacity: 0;
+                    }
+                }
+            }
+
+            &-imageContenue {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+
+                & i {
+                    font-size: 1.375rem;
+                    background: $gradient-bouton-couleur;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    opacity: 0;
+                    transition: 0.5s ease-in-out;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+
+        }
     }
 }
 
-.coeur {
-    display: none;
-
-    &:checked+.image1 {
-        opacity: 0;
-    }
-
-    &:checked+.image1+.image2 {
-        opacity: 1;
-    }
+///// Footer /////
+.footer__wrapper {
+    background-color: $color-background-footer;
+    color: white;
+    padding: 1.563rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-.image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: opacity 0.5s ease;
+.footer__titre {
+    & h3 {
+        font-family: $font-titres;
+        font-weight: 500;
+        margin: 0;
+    }   
+}
 
-    &2 {
-        opacity: 0;
+.footer__contenu {
+    display: flex;
+    flex-direction: column;
+    font-family: $font-texte;
+    gap: 0.438rem;
+    & i {
+        font-size: 0.813rem;
+        width: 0.75rem;
     }
 
-    &-container {
-        position: relative;
-        cursor: pointer;
+    &--ligne {
+        display: flex;
+        flex-direction: column;
+        gap: 0.438rem;
+    }
+
+    &--article {
+        display: flex;
+        flex-direction: row;
+        gap: 0.688rem;
     }
 }
