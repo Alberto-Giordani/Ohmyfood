@@ -288,7 +288,7 @@ h3 {
         font-family: $font-titres;
         font-weight: 500;
         margin: 0;
-    }   
+    }
 }
 
 .footer__contenu {
@@ -296,6 +296,7 @@ h3 {
     flex-direction: column;
     font-family: $font-texte;
     gap: 0.438rem;
+
     & i {
         font-size: 0.813rem;
         width: 0.75rem;
@@ -312,5 +313,72 @@ h3 {
         flex-direction: row;
         align-items: center;
         gap: 0.688rem;
+    }
+}
+
+//// Animation ////
+.la-page {
+    animation: showPage 3.5s ease-in-out;
+}
+
+.wave {
+    &__container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: top;
+        width: 100%;
+        height: 100%;
+        background: black;
+        z-index: 10;
+        animation: fadeOut ease-in-out 3.5s forwards;
+    }
+
+    &__text {
+        display: flex;
+
+        & span {
+            display: inline-block;
+            font-size: 1.875rem;
+            font-family: $font-titres;
+            color: white;
+            opacity: 0;
+            transform: translateY(300px);
+            animation: rise 3.5s forwards;
+
+            &:nth-child(1) {
+                animation-delay: 0s;
+            }
+
+            &:nth-child(2) {
+                animation-delay: 0.1s;
+            }
+
+            &:nth-child(3) {
+                animation-delay: 0.2s;
+            }
+
+            &:nth-child(4) {
+                animation-delay: 0.3s;
+            }
+
+            &:nth-child(5) {
+                animation-delay: 0.4s;
+            }
+
+            &:nth-child(6) {
+                animation-delay: 0.5s;
+            }
+
+            &:nth-child(7) {
+                animation-delay: 0.6s;
+            }
+
+            &:nth-child(8) {
+                animation-delay: 0.7s;
+            }
+        }
     }
 }
