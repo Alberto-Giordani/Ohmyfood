@@ -13,24 +13,21 @@ $gradient-bouton-couleur: linear-gradient(0deg, $color-primaire, $color-secondai
 @keyframes rise {
     0% {
         transform: translateY(300px);
-        color: $color-secondaire;
-        opacity: 0;
+        color: $color-primaire;
+        opacity: 1;
     }
 
     75% {
         transform: translateY(-15px);
-        color: $color-primaire;
-        opacity:1
+        opacity: 0.6;
     }
 
     90% {
         transform: translateY(-20px);
-        color: $gradient-bouton-couleur;
     }
 
     100% {
         transform: translateY(-40px);
-        color: black;
         opacity: 0;
         visibility: hidden;
         z-index: 0;
