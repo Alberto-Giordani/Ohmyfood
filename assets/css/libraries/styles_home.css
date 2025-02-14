@@ -128,6 +128,12 @@ h3 {
   border-radius: 1.563rem;
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.25));
   cursor: pointer;
+  transition: transform 300ms 100ms ease-in, opacity 300ms 100ms ease-in, filter 400ms ease-in-out;
+}
+.titrePage__explorer--bouton:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+  filter: drop-shadow(11px 17px 22px rgba(0, 0, 0, 0.45));
 }
 
 .fonctionnement {
@@ -163,6 +169,12 @@ h3 {
   border: none;
   border-radius: 1.25rem;
   filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.15));
+  transition: transform 300ms 100ms ease-in, opacity 300ms 100ms ease-in, filter 400ms ease-in-out;
+}
+.fonctionnement__explication--part-bouton:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+  filter: drop-shadow(11px 17px 22px rgba(0, 0, 0, 0.45));
 }
 .fonctionnement__explication--part-bouton .fa-solid {
   color: #7E7E7E;
@@ -216,6 +228,14 @@ h3 {
   flex-direction: column;
   position: relative;
   width: 100%;
+  background-color: white;
+  border-radius: 0 0 0.938rem 0.938rem;
+  transition: transform 300ms 100ms ease-in, opacity 300ms 100ms ease-in, filter 400ms ease-in-out;
+}
+.resto__liste--card:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+  filter: drop-shadow(11px 17px 22px rgba(0, 0, 0, 0.45));
 }
 .resto__liste--image {
   height: 11rem;
@@ -344,6 +364,10 @@ h3 {
   flex-direction: column;
   font-family: "Roboto", serif;
   gap: 0.438rem;
+}
+.footer__contenu a {
+  text-decoration: none;
+  color: white;
 }
 .footer__contenu i {
   font-size: 0.813rem;

@@ -75,6 +75,14 @@ $gradient-bouton-couleur: linear-gradient(0deg, $color-primaire, $color-secondai
     border: none;
     border-radius: 1.563rem;
     filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.25));
+    cursor: pointer;
+    transition: transform 300ms 100ms ease-in, opacity 300ms 100ms ease-in, filter 400ms ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+        opacity: 0.8;
+        filter: drop-shadow(11px 17px 22px rgba(0, 0, 0, 0.45));
+    }
 }
 
 @mixin bouton__fonctionnement {
@@ -92,6 +100,13 @@ $gradient-bouton-couleur: linear-gradient(0deg, $color-primaire, $color-secondai
     border: none;
     border-radius: 1.25rem;
     filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.15));
+    transition: transform 300ms 100ms ease-in, opacity 300ms 100ms ease-in, filter 400ms ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+        opacity: 0.8;
+        filter: drop-shadow(11px 17px 22px rgba(0, 0, 0, 0.45));
+    }
 }
 
 @mixin span__fonctionnement {
@@ -108,6 +123,7 @@ $gradient-bouton-couleur: linear-gradient(0deg, $color-primaire, $color-secondai
     font-family: $font-texte;
     font-weight: 500;
     font-size: 0.886rem;
+
 }
 
 @mixin card__resto {
@@ -115,6 +131,15 @@ $gradient-bouton-couleur: linear-gradient(0deg, $color-primaire, $color-secondai
     flex-direction: column;
     position: relative;
     width: 100%;
+    background-color: white;
+    border-radius: 0 0 0.938rem 0.938rem;
+    transition: transform 300ms 100ms ease-in, opacity 300ms 100ms ease-in, filter 400ms ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+        opacity: 0.8;
+        filter: drop-shadow(11px 17px 22px rgba(0, 0, 0, 0.45));
+    }
 }
 
 @mixin card__image {
