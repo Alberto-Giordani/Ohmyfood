@@ -187,6 +187,8 @@ h3 {
 @media screen and (min-width: 1082px) {
   .fonctionnement__explication {
     flex-direction: row;
+    gap: 0;
+    justify-content: space-between;
   }
 }
 .fonctionnement__explication--part {
@@ -203,6 +205,8 @@ h3 {
   gap: 1.25rem;
   align-items: center;
   min-width: 20.156rem;
+  max-width: 30.625rem;
+  width: 100%;
   height: 4.524rem;
   font-size: 1rem;
   font-family: "Roboto", serif;
@@ -212,6 +216,16 @@ h3 {
   border-radius: 1.25rem;
   filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.15));
   transition: transform 300ms 100ms ease-in, opacity 300ms 100ms ease-in, filter 400ms ease-in-out;
+}
+@media screen and (min-width: 1024px) {
+  .fonctionnement__explication--part-bouton {
+    max-width: 30rem;
+  }
+}
+@media screen and (min-width: 1081px) {
+  .fonctionnement__explication--part-bouton {
+    min-width: 20.156rem;
+  }
 }
 .fonctionnement__explication--part-bouton:hover {
   transform: scale(1.05);
@@ -248,6 +262,11 @@ h3 {
   margin: 0 1.063rem 4.125rem;
   position: relative;
 }
+@media screen and (min-width: 768px) {
+  .resto {
+    justify-content: center;
+  }
+}
 @media screen and (min-width: 1024px) {
   .resto {
     max-width: 67.5rem;
@@ -283,11 +302,6 @@ h3 {
     gap: 0;
   }
 }
-@media screen and (min-width: 1082px) {
-  .resto__liste--ligne {
-    gap: 6.25rem;
-  }
-}
 .resto__liste--card {
   display: flex;
   flex-direction: column;
@@ -300,10 +314,10 @@ h3 {
 }
 @media screen and (min-width: 1024px) {
   .resto__liste--card {
-    min-width: 21.188rem;
+    min-width: 30rem;
   }
 }
-@media screen and (min-width: 1082px) {
+@media screen and (min-width: 1081px) {
   .resto__liste--card {
     min-width: 30.625rem;
   }
@@ -489,7 +503,7 @@ h3 {
   left: 0;
   display: flex;
   justify-content: center;
-  align-items: top;
+  align-items: start;
   width: 100%;
   height: 100%;
   background: black;
