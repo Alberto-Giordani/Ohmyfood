@@ -51,6 +51,23 @@ h3 {
 
         & i {
             margin-right: 17px;
+            color: $color-background-footer;
+        }
+
+        & input {
+            border: none;
+            background: none;
+            font-family: $font-texte;
+            font-size: 1rem;
+            font-weight: 500;
+            width: 6.813rem;
+
+            &::placeholder {
+                font-family: $font-texte;
+                font-size: 1rem;
+                font-weight: 500;
+                color: $color-background-footer;
+            }
         }
     }
 }
@@ -239,7 +256,7 @@ h3 {
 
                 & i {
                     font-size: 1.375rem;
-                    transition: 0.5s ease-in-out;
+                    transition: 0.7s ease-in-out;
 
                     &:hover {
                         opacity: 0;
@@ -260,7 +277,7 @@ h3 {
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     opacity: 0;
-                    transition: 0.5s ease-in-out;
+                    transition: 0.7s ease-in-out;
 
                     &:hover {
                         opacity: 1;
@@ -355,24 +372,31 @@ h3 {
             &:nth-child(1) {
                 animation-delay: 0.1s;
             }
+
             &:nth-child(2) {
                 animation-delay: 0.2s;
             }
+
             &:nth-child(3) {
                 animation-delay: 0.3s;
             }
+
             &:nth-child(4) {
                 animation-delay: 0.4s;
             }
+
             &:nth-child(5) {
                 animation-delay: 0.5s;
             }
+
             &:nth-child(6) {
                 animation-delay: 0.6s;
             }
+
             &:nth-child(7) {
                 animation-delay: 0.7s;
             }
+
             &:nth-child(8) {
                 animation-delay: 0.8s;
             }
