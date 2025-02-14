@@ -149,6 +149,8 @@ h3 {
 
         @media screen and (min-width: 1082px) {
             flex-direction: row;
+            gap: 0;
+            justify-content: space-between;
         }
 
         &--part {
@@ -187,6 +189,10 @@ h3 {
     margin: 0 1.063rem 4.125rem;
     position: relative;
 
+    @media screen and (min-width: 768px) {
+        justify-content: center;
+    }
+
     @media screen and (min-width: 1024px) {
         max-width: 67.5rem;
     }
@@ -220,10 +226,6 @@ h3 {
                 width: 100%;
                 justify-content: space-between;
                 gap: 0;
-            }
-
-            @media screen and (min-width: 1082px) {
-                gap: 6.25rem;
             }
         }
 
@@ -406,7 +408,7 @@ h3 {
         left: 0;
         display: flex;
         justify-content: center;
-        align-items: top;
+        align-items: start;
         width: 100%;
         height: 100%;
         background: black;
