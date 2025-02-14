@@ -131,9 +131,18 @@ $gradient-bouton-couleur: linear-gradient(0deg, $color-primaire, $color-secondai
     flex-direction: column;
     position: relative;
     width: 100%;
+    max-width: 30.625rem;
     background-color: white;
     border-radius: 0.938rem;
     transition: transform 300ms 100ms ease-in, opacity 300ms 100ms ease-in, filter 400ms ease-in-out;
+
+    @media screen and (min-width: 1024px) {
+        min-width: 21.188rem;
+    }
+
+    @media screen and (min-width: 1082px) {
+        min-width: 30.625rem;
+    }
 
     &:hover {
         transform: scale(1.05);
