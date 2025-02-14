@@ -132,7 +132,7 @@ $gradient-bouton-couleur: linear-gradient(0deg, $color-primaire, $color-secondai
     position: relative;
     width: 100%;
     background-color: white;
-    border-radius: 0 0 0.938rem 0.938rem;
+    border-radius: 0.938rem;
     transition: transform 300ms 100ms ease-in, opacity 300ms 100ms ease-in, filter 400ms ease-in-out;
 
     &:hover {
