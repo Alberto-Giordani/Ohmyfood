@@ -8,6 +8,22 @@ $color-bouton-fonctionnement: #F6F6F6;
 $color-background-footer: #353535;
 $gradient-bouton-couleur: linear-gradient(0deg, $color-primaire, $color-secondaire);
 
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(450deg);
+    }
+
+    100% {
+        transform: rotate(720deg);
+        opacity: 0;
+        visibility: hidden;
+        z-index: 0;
+    }
+}
 
 
 @keyframes rise {
@@ -28,9 +44,6 @@ $gradient-bouton-couleur: linear-gradient(0deg, $color-primaire, $color-secondai
 
     100% {
         transform: translateY(-40px);
-        opacity: 0;
-        visibility: hidden;
-        z-index: 0;
     }
 }
 
