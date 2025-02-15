@@ -105,6 +105,8 @@ $gradient-bouton-couleur: linear-gradient(0deg, $color-primaire, $color-secondai
     gap: 1.25rem;
     align-items: center;
     min-width: 20.156rem;
+    max-width: 30.625rem;
+    width: 100%;
     height: 4.524rem;
     font-size: 1rem;
     font-family: $font-texte;
@@ -114,6 +116,14 @@ $gradient-bouton-couleur: linear-gradient(0deg, $color-primaire, $color-secondai
     border-radius: 1.25rem;
     filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.15));
     transition: transform 300ms 100ms ease-in, opacity 300ms 100ms ease-in, filter 400ms ease-in-out;
+
+    @media screen and (min-width: 1024px) {
+        max-width: 30rem;
+    }
+
+    @media screen and (min-width: 1081px) {
+        min-width: 20.156rem;
+    }
 
     &:hover {
         transform: scale(1.05);
@@ -144,9 +154,18 @@ $gradient-bouton-couleur: linear-gradient(0deg, $color-primaire, $color-secondai
     flex-direction: column;
     position: relative;
     width: 100%;
+    max-width: 30.625rem;
     background-color: white;
-    border-radius: 0 0 0.938rem 0.938rem;
+    border-radius: 0.938rem;
     transition: transform 300ms 100ms ease-in, opacity 300ms 100ms ease-in, filter 400ms ease-in-out;
+
+    @media screen and (min-width: 1024px) {
+        min-width: 30rem;
+    }
+
+    @media screen and (min-width: 1081px) {
+        min-width: 30.625rem;
+    }
 
     &:hover {
         transform: scale(1.05);

@@ -79,8 +79,19 @@ h3 {
 .headPage__logo--grand {
   display: none;
 }
+@media screen and (min-width: 768px) {
+  .headPage__logo--grand {
+    display: inline;
+    width: 200px;
+  }
+}
 .headPage__logo--petit {
   width: 162px;
+}
+@media screen and (min-width: 768px) {
+  .headPage__logo--petit {
+    display: none;
+  }
 }
 .headPage__localisation {
   display: flex;
@@ -92,6 +103,11 @@ h3 {
   font-size: 1rem;
   font-weight: 500;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+@media screen and (min-width: 768px) {
+  .headPage__localisation {
+    box-shadow: none;
+  }
 }
 .headPage__localisation i {
   margin-right: 17px;
@@ -114,6 +130,12 @@ h3 {
 
 .titreFonctionnementWrapper {
   margin: 0 1.25rem;
+}
+@media screen and (min-width: 1082px) {
+  .titreFonctionnementWrapper {
+    margin: 0 auto;
+    max-width: 67.5rem;
+  }
 }
 
 .titrePage {
@@ -173,6 +195,13 @@ h3 {
   flex-direction: column;
   gap: 1.563rem;
 }
+@media screen and (min-width: 1082px) {
+  .fonctionnement__explication {
+    flex-direction: row;
+    gap: 0;
+    justify-content: space-between;
+  }
+}
 .fonctionnement__explication--part {
   display: flex;
   justify-content: flex-start;
@@ -187,6 +216,8 @@ h3 {
   gap: 1.25rem;
   align-items: center;
   min-width: 20.156rem;
+  max-width: 30.625rem;
+  width: 100%;
   height: 4.524rem;
   font-size: 1rem;
   font-family: "Roboto", serif;
@@ -196,6 +227,16 @@ h3 {
   border-radius: 1.25rem;
   filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.15));
   transition: transform 300ms 100ms ease-in, opacity 300ms 100ms ease-in, filter 400ms ease-in-out;
+}
+@media screen and (min-width: 1024px) {
+  .fonctionnement__explication--part-bouton {
+    max-width: 30rem;
+  }
+}
+@media screen and (min-width: 1081px) {
+  .fonctionnement__explication--part-bouton {
+    min-width: 20.156rem;
+  }
 }
 .fonctionnement__explication--part-bouton:hover {
   transform: scale(1.05);
@@ -232,6 +273,21 @@ h3 {
   margin: 0 1.063rem 4.125rem;
   position: relative;
 }
+@media screen and (min-width: 768px) {
+  .resto {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .resto {
+    max-width: 67.5rem;
+  }
+}
+@media screen and (min-width: 1082px) {
+  .resto {
+    margin: 0 auto 4.125rem;
+  }
+}
 .resto__titre {
   margin: 0 0 1rem 0.188rem;
 }
@@ -249,14 +305,33 @@ h3 {
   margin-bottom: 0;
   gap: 1.875rem;
 }
+@media screen and (min-width: 1024px) {
+  .resto__liste--ligne {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    gap: 0;
+  }
+}
 .resto__liste--card {
   display: flex;
   flex-direction: column;
   position: relative;
   width: 100%;
+  max-width: 30.625rem;
   background-color: white;
-  border-radius: 0 0 0.938rem 0.938rem;
+  border-radius: 0.938rem;
   transition: transform 300ms 100ms ease-in, opacity 300ms 100ms ease-in, filter 400ms ease-in-out;
+}
+@media screen and (min-width: 1024px) {
+  .resto__liste--card {
+    min-width: 30rem;
+  }
+}
+@media screen and (min-width: 1081px) {
+  .resto__liste--card {
+    min-width: 30.625rem;
+  }
 }
 .resto__liste--card:hover {
   transform: scale(1.05);
@@ -378,6 +453,12 @@ h3 {
   flex-direction: column;
   gap: 1rem;
 }
+@media screen and (min-width: 1024px) {
+  .footer__wrapper {
+    flex-direction: row-reverse;
+    gap: 5.313rem;
+  }
+}
 
 .footer__titre h3 {
   font-family: "Shrikhand", serif;
@@ -391,6 +472,12 @@ h3 {
   font-family: "Roboto", serif;
   gap: 0.438rem;
 }
+@media screen and (min-width: 1024px) {
+  .footer__contenu {
+    flex-direction: row;
+    gap: 2.5rem;
+  }
+}
 .footer__contenu a {
   text-decoration: none;
   color: white;
@@ -403,6 +490,12 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 0.438rem;
+}
+@media screen and (min-width: 1024px) {
+  .footer__contenu--ligne {
+    flex-direction: row;
+    gap: 1rem;
+  }
 }
 .footer__contenu--article {
   display: flex;
