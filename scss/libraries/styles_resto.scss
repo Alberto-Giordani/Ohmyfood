@@ -1,0 +1,301 @@
+@use "root" as *;
+
+
+//// Haut de page ///
+.headPage {
+    width: 100%;
+
+    &__banner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 3.938rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+
+        @media screen and (min-width: 768px) {
+            height: 6.021rem;
+        }
+
+        &--fleche {
+            position: absolute;
+            left: 1.438rem;
+            font-size: 1.063rem;
+            color: $color-background-footer;
+            text-decoration: none;
+
+            &:hover {
+                transform: scale(1.05);
+                opacity: 0.8;
+                filter: drop-shadow(11px 17px 22px rgba(0, 0, 0, 0.45));
+            }
+        }
+
+        &--logo {
+            &-grand {
+                display: none;
+
+                @media screen and (min-width: 768px) {
+                    display: inline;
+                    width: 200px;
+                }
+            }
+
+            &-petit {
+                width: 162px;
+
+                @media screen and (min-width: 768px) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__image {
+        height: 17.188rem;
+        position: relative;
+        z-index: 1;
+
+        @media screen and (min-width: 768px) {
+            height: 23.938rem;
+        }
+
+        &--photo {
+            @include card__image;
+            object-position: center 60%;
+            z-index: 1;
+        }
+
+    }
+}
+
+/// Main ///
+.main__container {
+    margin: -3.438rem auto 0;
+    padding: 2rem 1.063rem 2.5rem;
+    background-color: $color-bouton-fonctionnement;
+    border-radius: 2.5rem 2.5rem 0 0;
+    max-width: 65.938rem;
+    z-index: 2;
+    position: relative;
+    overflow: hidden;
+}
+
+//// Titre page restaurant ///
+.titreResto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+
+    & h1 {
+        font-family: $font-titres;
+        font-size: 1.75rem;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    &__favori {
+        color: #101010;
+        display: flex;
+
+        &-imageContainer {
+            position: relative;
+
+            & i {
+                font-size: 1.375rem;
+                transition: 0.7s ease-in-out;
+
+                &:hover {
+                    opacity: 0;
+                }
+            }
+        }
+
+        &-imageContenue {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            & i {
+                font-size: 1.375rem;
+                background: $gradient-bouton-couleur;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                opacity: 0;
+                transition: 0.7s ease-in-out;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+
+    }
+}
+
+
+/// Menu ///
+.menuResto {
+
+    max-width: 38.062rem;
+    margin: 0 auto 2.5rem;
+
+    h2 {
+        transform: translateX(1000px);
+        animation: appear 1s ease-out forwards;
+    }
+
+    &__titre {
+        font-family: $font-texte;
+        font-size: 1rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        position: relative;
+        margin: 0 auto;
+
+        &--underline {
+            border-bottom: 0.188rem solid $color-tertiaire;
+            padding-bottom: 0.438rem;
+        }
+    }
+
+    &__liste {
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        list-style-type: none;
+        padding: 0.75rem 0 0;
+        gap: 0.656rem;
+        width: 100%;
+
+        li {
+            transform: translateX(1000px);
+            animation: appear 1.5s cubic-bezier(.31, .54, 0, 1.19) forwards;
+
+            &:nth-child(1) {
+                animation-delay: 0.5s;
+            }
+
+            &:nth-child(2) {
+                animation-delay: 0.7s;
+            }
+
+            &:nth-child(3) {
+                animation-delay: 0.9s;
+            }
+
+            &:nth-child(4) {
+                animation-delay: 1.1s;
+            }
+        }
+
+
+        &--element {
+            display: flex;
+            height: 2.625rem;
+            max-width: 100%;
+            padding: 0.844rem 0.938rem;
+            overflow: hidden;
+            position: relative;
+            border-radius: 0.938rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s ease-in-out;
+
+
+            &:hover {
+
+                .menuResto__liste--element-barre {
+                    transform: translateX(0);
+                }
+
+                .menuResto__liste--element-container,
+                .menuResto__liste--element-contenu {
+                    width: calc(100% - 3.688rem);
+                    cursor: pointer;
+                }
+
+                .menuResto__liste--element-icone {
+                    transform: rotate(0deg);
+                }
+            }
+
+            &-barre {
+                position: absolute;
+                width: 3.688rem;
+                height: 4.313rem;
+                background-color: $color-tertiaire;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                top: 0;
+                right: 0;
+                color: white;
+                font-size: 1.25rem;
+                overflow: hidden;
+                transform: translateX(3.688rem);
+                transition: all 0.5s ease-in-out;
+            }
+
+            &-container {
+                display: flex;
+                width: 100%;
+                position: relative;
+                justify-content: space-between;
+                align-items: center;
+                transition: all 0.5s ease-in-out;
+
+                &-prix {
+                    font-family: $font-texte;
+                    font-size: 0.938rem;
+                    font-weight: 700;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                }
+            }
+
+            &-contenu {
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 0.313rem;
+
+                &-text {
+                    font-family: $font-texte;
+                    font-size: 1.125rem;
+                    font-weight: 500;
+                    margin: 0;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                &-sousText {
+                    font-family: $font-texte;
+                    font-size: 0.938rem;
+                    font-weight: 300;
+                    margin: 0;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+
+                }
+            }
+
+            &-icone {
+                transform: rotate(270deg);
+                transition: all 0.5s ease-in-out;
+            }
+        }
+    }
+}

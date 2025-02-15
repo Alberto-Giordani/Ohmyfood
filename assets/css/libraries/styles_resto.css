@@ -1,0 +1,297 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(450deg);
+  }
+  100% {
+    transform: rotate(720deg);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+@keyframes appear {
+  0% {
+    transform: translateX(1000px);
+  }
+  80% {
+    transform: translateX(-40px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+@keyframes showPage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    z-index: 2;
+  }
+}
+.headPage {
+  width: 100%;
+}
+.headPage__banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 3.938rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+@media screen and (min-width: 768px) {
+  .headPage__banner {
+    height: 6.021rem;
+  }
+}
+.headPage__banner--fleche {
+  position: absolute;
+  left: 1.438rem;
+  font-size: 1.063rem;
+  color: #353535;
+  text-decoration: none;
+}
+.headPage__banner--fleche:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+  filter: drop-shadow(11px 17px 22px rgba(0, 0, 0, 0.45));
+}
+.headPage__banner--logo-grand {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .headPage__banner--logo-grand {
+    display: inline;
+    width: 200px;
+  }
+}
+.headPage__banner--logo-petit {
+  width: 162px;
+}
+@media screen and (min-width: 768px) {
+  .headPage__banner--logo-petit {
+    display: none;
+  }
+}
+.headPage__image {
+  height: 17.188rem;
+  position: relative;
+  z-index: 1;
+}
+@media screen and (min-width: 768px) {
+  .headPage__image {
+    height: 23.938rem;
+  }
+}
+.headPage__image--photo {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-position: center 60%;
+  z-index: 1;
+}
+
+.main__container {
+  margin: -3.438rem auto 0;
+  padding: 2rem 1.063rem 2.5rem;
+  background-color: #F6F6F6;
+  border-radius: 2.5rem 2.5rem 0 0;
+  max-width: 65.938rem;
+  z-index: 2;
+  position: relative;
+  overflow: hidden;
+}
+
+.titreResto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.titreResto h1 {
+  font-family: "Shrikhand", serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin: 0;
+}
+.titreResto__favori {
+  color: #101010;
+  display: flex;
+}
+.titreResto__favori-imageContainer {
+  position: relative;
+}
+.titreResto__favori-imageContainer i {
+  font-size: 1.375rem;
+  transition: 0.7s ease-in-out;
+}
+.titreResto__favori-imageContainer i:hover {
+  opacity: 0;
+}
+.titreResto__favori-imageContenue {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.titreResto__favori-imageContenue i {
+  font-size: 1.375rem;
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transition: 0.7s ease-in-out;
+}
+.titreResto__favori-imageContenue i:hover {
+  opacity: 1;
+}
+
+.menuResto {
+  max-width: 38.062rem;
+  margin: 0 auto 2.5rem;
+}
+.menuResto h2 {
+  transform: translateX(1000px);
+  animation: appear 1s ease-out forwards;
+}
+.menuResto__titre {
+  font-family: "Roboto", serif;
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  position: relative;
+  margin: 0 auto;
+}
+.menuResto__titre--underline {
+  border-bottom: 0.188rem solid #99E2D0;
+  padding-bottom: 0.438rem;
+}
+.menuResto__liste {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  list-style-type: none;
+  padding: 0.75rem 0 0;
+  gap: 0.656rem;
+  width: 100%;
+}
+.menuResto__liste li {
+  transform: translateX(1000px);
+  animation: appear 1.5s cubic-bezier(0.31, 0.54, 0, 1.19) forwards;
+}
+.menuResto__liste li:nth-child(1) {
+  animation-delay: 0.5s;
+}
+.menuResto__liste li:nth-child(2) {
+  animation-delay: 0.7s;
+}
+.menuResto__liste li:nth-child(3) {
+  animation-delay: 0.9s;
+}
+.menuResto__liste li:nth-child(4) {
+  animation-delay: 1.1s;
+}
+.menuResto__liste--element {
+  display: flex;
+  height: 2.625rem;
+  max-width: 100%;
+  padding: 0.844rem 0.938rem;
+  overflow: hidden;
+  position: relative;
+  border-radius: 0.938rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out;
+}
+.menuResto__liste--element:hover .menuResto__liste--element-barre {
+  transform: translateX(0);
+}
+.menuResto__liste--element:hover .menuResto__liste--element-container,
+.menuResto__liste--element:hover .menuResto__liste--element-contenu {
+  width: calc(100% - 3.688rem);
+  cursor: pointer;
+}
+.menuResto__liste--element:hover .menuResto__liste--element-icone {
+  transform: rotate(0deg);
+}
+.menuResto__liste--element-barre {
+  position: absolute;
+  width: 3.688rem;
+  height: 4.313rem;
+  background-color: #99E2D0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  color: white;
+  font-size: 1.25rem;
+  overflow: hidden;
+  transform: translateX(3.688rem);
+  transition: all 0.5s ease-in-out;
+}
+.menuResto__liste--element-container {
+  display: flex;
+  width: 100%;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+.menuResto__liste--element-container-prix {
+  font-family: "Roboto", serif;
+  font-size: 0.938rem;
+  font-weight: 700;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menuResto__liste--element-contenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.313rem;
+}
+.menuResto__liste--element-contenu-text {
+  font-family: "Roboto", serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menuResto__liste--element-contenu-sousText {
+  font-family: "Roboto", serif;
+  font-size: 0.938rem;
+  font-weight: 300;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menuResto__liste--element-icone {
+  transform: rotate(270deg);
+  transition: all 0.5s ease-in-out;
+}
+
+/*# sourceMappingURL=styles_resto.css.map */

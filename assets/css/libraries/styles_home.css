@@ -12,21 +12,15 @@
     z-index: 0;
   }
 }
-@keyframes rise {
+@keyframes appear {
   0% {
-    transform: translateY(300px);
-    color: #9356DC;
-    opacity: 1;
+    transform: translateX(1000px);
   }
-  75% {
-    transform: translateY(-15px);
-    opacity: 0.6;
-  }
-  90% {
-    transform: translateY(-20px);
+  80% {
+    transform: translateX(-40px);
   }
   100% {
-    transform: translateY(-40px);
+    transform: translateX(0px);
   }
 }
 @keyframes fadeOut {

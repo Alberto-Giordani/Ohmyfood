@@ -26,24 +26,17 @@ $gradient-bouton-couleur: linear-gradient(0deg, $color-primaire, $color-secondai
 }
 
 
-@keyframes rise {
+@keyframes appear {
     0% {
-        transform: translateY(300px);
-        color: $color-primaire;
-        opacity: 1;
+        transform: translateX(1000px);
     }
 
-    75% {
-        transform: translateY(-15px);
-        opacity: 0.6;
-    }
-
-    90% {
-        transform: translateY(-20px);
+    80% {
+        transform: translateX(-40px);
     }
 
     100% {
-        transform: translateY(-40px);
+        transform: translateX(0px);
     }
 }
 
