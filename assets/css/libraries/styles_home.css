@@ -8,10 +8,10 @@
   }
   85% {
     transform: translateX(20px);
+    width: 100%;
   }
   100% {
     transform: translateX(0px);
-    width: 100%;
   }
 }
 @keyframes appear_tete {
@@ -59,8 +59,9 @@
   0% {
     width: 100%;
   }
-  65%, 97% {
-    width: 60%;
+  40%, 85% {
+    width: 50%;
+    padding-right: 2rem;
   }
   100% {
     width: 100%;
