@@ -247,10 +247,12 @@
 .menuResto__liste--element:hover .menuResto__liste--element-barre {
   transform: translateX(0);
 }
-.menuResto__liste--element:hover .menuResto__liste--element-container,
-.menuResto__liste--element:hover .menuResto__liste--element-contenu {
+.menuResto__liste--element:hover .menuResto__liste--element-container {
   width: calc(100% - 3.688rem);
   cursor: pointer;
+}
+.menuResto__liste--element:hover .menuResto__liste--element-contenu {
+  width: calc(100% - 5.688rem);
 }
 .menuResto__liste--element:hover .menuResto__liste--element-icone {
   transform: rotate(0deg);
