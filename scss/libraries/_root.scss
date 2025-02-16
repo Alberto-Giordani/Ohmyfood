@@ -10,22 +10,6 @@ $gradient-bouton-couleur: linear-gradient(0deg, $color-primaire, $color-secondai
 $radius-border-resto: 2.5rem;
 $radius-border-buttons: 0.938rem;
 
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    50% {
-        transform: rotate(450deg);
-    }
-
-    100% {
-        transform: rotate(720deg);
-        opacity: 0;
-        visibility: hidden;
-        z-index: 0;
-    }
-}
 
 
 @keyframes appear {
@@ -80,6 +64,38 @@ $radius-border-buttons: 0.938rem;
     100% {
         opacity: 1;
         z-index: 2;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(450deg);
+    }
+
+    100% {
+        transform: rotate(720deg);
+        opacity: 0;
+        visibility: hidden;
+        z-index: 0;
+    }
+}
+
+@keyframes text_reduit {
+    0% {
+        width: 100%;
+    }
+
+    65%,
+    97% {
+        width: 60%;
+    }
+
+    100% {
+        width: 100%;
     }
 }
 
@@ -150,27 +166,29 @@ $radius-border-buttons: 0.938rem;
     }
 }
 
-@mixin display__center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@mixin bouton__nouveau {
+    position: absolute;
+    font-family: $font-texte;
+    font-size: 0.875rem;
+    color: #008766;
+    line-height: 1.813rem;
+    text-align: center;
+    background-color: $color-tertiaire;
+    width: 5rem;
+    height: 1.813rem;
+    z-index: 1;
+    border-radius: 0.125rem;
+    top: 0.813rem;
+    right: 1.25rem;
+    bottom: 8.25rem;
+    border: none;
 }
 
-@mixin span__fonctionnement {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@mixin card__image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    z-index: 1;
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 50%;
-    color: white;
-    background-color: $color-primaire;
-    font-family: $font-texte;
-    font-weight: 500;
-    font-size: 0.886rem;
-
 }
 
 @mixin card__resto {
@@ -198,29 +216,27 @@ $radius-border-buttons: 0.938rem;
     }
 }
 
-@mixin card__image {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
+@mixin display__center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-@mixin bouton__nouveau {
+@mixin span__fonctionnement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    font-family: $font-texte;
-    font-size: 0.875rem;
-    color: #008766;
-    line-height: 1.813rem;
-    text-align: center;
-    background-color: $color-tertiaire;
-    width: 5rem;
-    height: 1.813rem;
     z-index: 1;
-    border-radius: 0.125rem;
-    top: 0.813rem;
-    right: 1.25rem;
-    bottom: 8.25rem;
-    border: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    color: white;
+    background-color: $color-primaire;
+    font-family: $font-texte;
+    font-weight: 500;
+    font-size: 0.886rem;
+
 }
 
 @mixin textes-menu {

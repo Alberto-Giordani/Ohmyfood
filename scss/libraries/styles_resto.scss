@@ -255,6 +255,7 @@
                 flex-direction: column;
                 justify-content: center;
                 gap: 0.313rem;
+                animation: text_reduit 1.5s cubic-bezier(.31, .54, 0, 1.19) forwards;
 
                 @media screen and (max-width:361px) {
                     max-width: 16.875rem;

@@ -1,17 +1,3 @@
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(450deg);
-  }
-  100% {
-    transform: rotate(720deg);
-    opacity: 0;
-    visibility: hidden;
-    z-index: 0;
-  }
-}
 @keyframes appear {
   0% {
     transform: translateX(1000px);
@@ -53,6 +39,31 @@
   100% {
     opacity: 1;
     z-index: 2;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(450deg);
+  }
+  100% {
+    transform: rotate(720deg);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 0;
+  }
+}
+@keyframes text_reduit {
+  0% {
+    width: 100%;
+  }
+  65%, 97% {
+    width: 60%;
+  }
+  100% {
+    width: 100%;
   }
 }
 body {
@@ -781,6 +792,7 @@ h3 {
   flex-direction: column;
   justify-content: center;
   gap: 0.313rem;
+  animation: text_reduit 1.5s cubic-bezier(0.31, 0.54, 0, 1.19) forwards;
 }
 @media screen and (max-width: 361px) {
   .menuResto__liste--element-contenu {
