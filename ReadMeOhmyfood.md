@@ -1,28 +1,28 @@
-Ohmyfood
+#Ohmyfood
 
 Ohmyfood est un projet de site web permettant aux utilisateurs de découvrir et de précommander des plats dans des restaurants gastronomiques sélectionnés.
 
-🚀 Fonctionnalités
+##🚀 Fonctionnalités
 
-Interface moderne et responsive
+- Interface moderne et responsive
 
-Animations et transitions CSS
+- Animations et transitions CSS
 
-Design mobile-first
+- Design mobile-first
 
-Expérience utilisateur fluide
+- Expérience utilisateur fluide
 
-🛠️ Technologies utilisées
+##🛠️ Technologies utilisées
 
-HTML5
+- HTML5
 
-SASS (SCSS) pour la gestion des styles
+- SASS (SCSS) pour la gestion des styles
 
-Flexbox pour la mise en page
+- Flexbox pour la mise en page
 
-Animations CSS pour les effets visuels
+- Animations CSS pour les effets visuels
 
-📌 Structure du projet
+##📌 Structure du projet
 
 📂 index.html : Page d'accueil
 📂 restaurants/ : Pages individuelles des restaurants
@@ -30,27 +30,29 @@ Animations CSS pour les effets visuels
 📂 assets/scss/ : Fichiers sources SCSS
 📂 assets/images/ : Ressources graphiques
 
-🎨 Effets graphiques et animations
+##🎨 Effets graphiques et animations
 
-Loader CSS : Animation de chargement au démarrage
+- Loader CSS : Animation de chargement au démarrage
 
-Apparition progressive des éléments : Menus et plats animés en CSS
+- Apparition progressive des éléments : Menus et plats animés en CSS
 
-Effet de survol sur les boutons et favoris
+- Effet de survol sur les boutons et favoris
 
-📌 Améliorations possibles
+##📌 Améliorations possibles
 
 ✅ Backend pour la gestion des commandes
 ✅ Réservation en ligne
 ✅ Optimisation de l'accessibilité et SEO
 ✅ Améliorations possibles avec JavaScript :
 
-Animations avancées déclenchées au scroll (apparition fluide des plats)
+- Animations avancées déclenchées au scroll (apparition fluide des plats)
 
-Chargement dynamique avec gestion du temps réel
+- Chargement dynamique avec gestion du temps réel
 
-Transition fluide pour l'ajout/suppression des favoris
+- Transition fluide pour l'ajout/suppression des favoris
 
-Gestion des menus avec filtres dynamiques
+- Gestion des menus avec filtres dynamiques
+
+---
 
 Créé par Alberto Giordani
