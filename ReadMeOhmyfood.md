@@ -1,8 +1,8 @@
-#Ohmyfood
+# Ohmyfood
 
 Ohmyfood est un projet de site web permettant aux utilisateurs de découvrir et de précommander des plats dans des restaurants gastronomiques sélectionnés.
 
-##🚀 Fonctionnalités
+## 🚀 Fonctionnalités
 
 - Interface moderne et responsive
 
@@ -12,7 +12,7 @@ Ohmyfood est un projet de site web permettant aux utilisateurs de découvrir et 
 
 - Expérience utilisateur fluide
 
-##🛠️ Technologies utilisées
+## 🛠️ Technologies utilisées
 
 - HTML5
 
@@ -22,7 +22,7 @@ Ohmyfood est un projet de site web permettant aux utilisateurs de découvrir et 
 
 - Animations CSS pour les effets visuels
 
-##📌 Structure du projet
+## 📌 Structure du projet
 
 📂 index.html : Page d'accueil
 📂 restaurants/ : Pages individuelles des restaurants
@@ -30,7 +30,7 @@ Ohmyfood est un projet de site web permettant aux utilisateurs de découvrir et 
 📂 assets/scss/ : Fichiers sources SCSS
 📂 assets/images/ : Ressources graphiques
 
-##🎨 Effets graphiques et animations
+## 🎨 Effets graphiques et animations
 
 - Loader CSS : Animation de chargement au démarrage
 
@@ -38,7 +38,7 @@ Ohmyfood est un projet de site web permettant aux utilisateurs de découvrir et 
 
 - Effet de survol sur les boutons et favoris
 
-##📌 Améliorations possibles
+## 📌 Améliorations possibles
 
 ✅ Backend pour la gestion des commandes
 ✅ Réservation en ligne
