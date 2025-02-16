@@ -3,10 +3,12 @@ $font-texte: 'Roboto', serif;
 $color-primaire: #9356DC;
 $color-secondaire: #FF79DA;
 $color-tertiaire: #99E2D0;
-$color-localisation: #EAEAEA;
-$color-bouton-fonctionnement: #F6F6F6;
-$color-background-footer: #353535;
+$color-blanc: #EAEAEA;
+$color-gris-clair: #F6F6F6;
+$color-gris-sombre: #353535;
 $gradient-bouton-couleur: linear-gradient(0deg, $color-primaire, $color-secondaire);
+$radius-border-resto: 2.5rem;
+$radius-border-buttons: 0.938rem;
 
 @keyframes spin {
     0% {
@@ -31,8 +33,24 @@ $gradient-bouton-couleur: linear-gradient(0deg, $color-primaire, $color-secondai
         transform: translateX(1000px);
     }
 
-    80% {
+    65% {
         transform: translateX(-40px);
+        width: 70%;
+    }
+
+    85% {
+        transform: translateX(20px);
+    }
+
+    100% {
+        transform: translateX(0px);
+        width: 100%;
+    }
+}
+
+@keyframes appear_tete {
+    0% {
+        transform: translateX(1000px);
     }
 
     100% {
@@ -66,10 +84,17 @@ $gradient-bouton-couleur: linear-gradient(0deg, $color-primaire, $color-secondai
 }
 
 
-@mixin display__center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@mixin background_i {
+    font-size: 1.375rem;
+    background: $gradient-bouton-couleur;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    transition: 0.7s ease-in-out;
+
+    &:hover {
+        opacity: 1;
+    }
 }
 
 @mixin bouton__couleur {
@@ -104,7 +129,7 @@ $gradient-bouton-couleur: linear-gradient(0deg, $color-primaire, $color-secondai
     font-size: 1rem;
     font-family: $font-texte;
     font-weight: 500;
-    background-color: $color-bouton-fonctionnement;
+    background-color: $color-gris-clair;
     border: none;
     border-radius: 1.25rem;
     filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.15));
@@ -123,6 +148,12 @@ $gradient-bouton-couleur: linear-gradient(0deg, $color-primaire, $color-secondai
         opacity: 0.8;
         filter: drop-shadow(11px 17px 22px rgba(0, 0, 0, 0.45));
     }
+}
+
+@mixin display__center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @mixin span__fonctionnement {
@@ -149,7 +180,7 @@ $gradient-bouton-couleur: linear-gradient(0deg, $color-primaire, $color-secondai
     width: 100%;
     max-width: 30.625rem;
     background-color: white;
-    border-radius: 0.938rem;
+    border-radius: $radius-border-buttons;
     transition: transform 300ms 100ms ease-in, opacity 300ms 100ms ease-in, filter 400ms ease-in-out;
 
     @media screen and (min-width: 1024px) {
@@ -190,4 +221,11 @@ $gradient-bouton-couleur: linear-gradient(0deg, $color-primaire, $color-secondai
     right: 1.25rem;
     bottom: 8.25rem;
     border: none;
+}
+
+@mixin textes-menu {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

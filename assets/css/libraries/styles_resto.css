@@ -16,8 +16,21 @@
   0% {
     transform: translateX(1000px);
   }
-  80% {
+  65% {
     transform: translateX(-40px);
+    width: 70%;
+  }
+  85% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0px);
+    width: 100%;
+  }
+}
+@keyframes appear_tete {
+  0% {
+    transform: translateX(1000px);
   }
   100% {
     transform: translateX(0px);
@@ -102,8 +115,13 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  object-position: center 60%;
   z-index: 1;
+}
+.headPage__image--photo-la-palette, .headPage__image--photo-la-note {
+  object-position: center 60%;
+}
+.headPage__image--photo-a-la, .headPage__image--photo-le-delice {
+  object-position: center 65%;
 }
 
 .main__container {
@@ -125,9 +143,7 @@
   margin-bottom: 2.5rem;
 }
 .titreResto h1 {
-  font-family: "Shrikhand", serif;
-  font-size: 1.75rem;
-  font-weight: 400;
+  font: 400 1.75rem "Shrikhand", serif;
   margin: 0;
 }
 .titreResto__favori {
@@ -169,12 +185,10 @@
 }
 .menuResto h2 {
   transform: translateX(1000px);
-  animation: appear 1s ease-out forwards;
+  animation: appear_tete 1s ease-out forwards;
 }
 .menuResto__titre {
-  font-family: "Roboto", serif;
-  font-size: 1rem;
-  font-weight: 300;
+  font: 300 1rem "Roboto", serif;
   text-transform: uppercase;
   position: relative;
   margin: 0 auto;
@@ -231,13 +245,13 @@
   transform: rotate(0deg);
 }
 .menuResto__liste--element-barre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   width: 3.688rem;
   height: 4.313rem;
   background-color: #99E2D0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   top: 0;
   right: 0;
   color: white;
@@ -255,9 +269,7 @@
   transition: all 0.5s ease-in-out;
 }
 .menuResto__liste--element-container-prix {
-  font-family: "Roboto", serif;
-  font-size: 0.938rem;
-  font-weight: 700;
+  font: 700 0.938rem "Roboto", serif;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -271,19 +283,20 @@
   justify-content: center;
   gap: 0.313rem;
 }
+@media screen and (max-width: 361px) {
+  .menuResto__liste--element-contenu {
+    max-width: 16.875rem;
+  }
+}
 .menuResto__liste--element-contenu-text {
-  font-family: "Roboto", serif;
-  font-size: 1.125rem;
-  font-weight: 500;
+  font: 500 1.125rem "Roboto", serif;
   margin: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .menuResto__liste--element-contenu-sousText {
-  font-family: "Roboto", serif;
-  font-size: 0.938rem;
-  font-weight: 300;
+  font: 300 0.938rem "Roboto", serif;
   margin: 0;
   white-space: nowrap;
   overflow: hidden;

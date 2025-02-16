@@ -6,9 +6,7 @@
     width: 100%;
 
     &__banner {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include display__center;
         position: relative;
         height: 3.938rem;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
@@ -21,7 +19,7 @@
             position: absolute;
             left: 1.438rem;
             font-size: 1.063rem;
-            color: $color-background-footer;
+            color: $color-gris-sombre;
             text-decoration: none;
 
             &:hover {
@@ -62,19 +60,27 @@
 
         &--photo {
             @include card__image;
-            object-position: center 60%;
             z-index: 1;
-        }
 
+            &-la-palette,
+            &-la-note {
+                object-position: center 60%;
+            }
+
+            &-a-la,
+            &-le-delice {
+                object-position: center 65%;
+            }
+        }
     }
 }
 
 /// Main ///
 .main__container {
     margin: -3.438rem auto 0;
-    padding: 2rem 1.063rem 2.5rem;
-    background-color: $color-bouton-fonctionnement;
-    border-radius: 2.5rem 2.5rem 0 0;
+    padding: 2rem 1.063rem $radius-border-resto;
+    background-color: $color-gris-clair;
+    border-radius: $radius-border-resto $radius-border-resto 0 0;
     max-width: 65.938rem;
     z-index: 2;
     position: relative;
@@ -83,16 +89,12 @@
 
 //// Titre page restaurant ///
 .titreResto {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include display__center;
     gap: 1.5rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: $radius-border-resto;
 
     & h1 {
-        font-family: $font-titres;
-        font-size: 1.75rem;
-        font-weight: 400;
+        font: 400 1.75rem $font-titres;
         margin: 0;
     }
 
@@ -121,16 +123,7 @@
             bottom: 0;
 
             & i {
-                font-size: 1.375rem;
-                background: $gradient-bouton-couleur;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                opacity: 0;
-                transition: 0.7s ease-in-out;
-
-                &:hover {
-                    opacity: 1;
-                }
+                @include background_i;
             }
         }
 
@@ -142,17 +135,15 @@
 .menuResto {
 
     max-width: 38.062rem;
-    margin: 0 auto 2.5rem;
+    margin: 0 auto $radius-border-resto;
 
     h2 {
         transform: translateX(1000px);
-        animation: appear 1s ease-out forwards;
+        animation: appear_tete 1s ease-out forwards;
     }
 
     &__titre {
-        font-family: $font-texte;
-        font-size: 1rem;
-        font-weight: 300;
+        font: 300 1rem $font-texte;
         text-transform: uppercase;
         position: relative;
         margin: 0 auto;
@@ -176,6 +167,7 @@
             transform: translateX(1000px);
             animation: appear 1.5s cubic-bezier(.31, .54, 0, 1.19) forwards;
 
+            /// Pour faire apparaître les élements avec un délai de 0.2s entre eux ///
             &:nth-child(1) {
                 animation-delay: 0.5s;
             }
@@ -198,13 +190,12 @@
             display: flex;
             height: 2.625rem;
             max-width: 100%;
-            padding: 0.844rem 0.938rem;
+            padding: 0.844rem $radius-border-buttons;
             overflow: hidden;
             position: relative;
-            border-radius: 0.938rem;
+            border-radius: $radius-border-buttons;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.5s ease-in-out;
-
 
             &:hover {
 
@@ -224,13 +215,11 @@
             }
 
             &-barre {
+                @include display__center;
                 position: absolute;
                 width: 3.688rem;
                 height: 4.313rem;
                 background-color: $color-tertiaire;
-                display: flex;
-                align-items: center;
-                justify-content: center;
                 top: 0;
                 right: 0;
                 color: white;
@@ -249,9 +238,7 @@
                 transition: all 0.5s ease-in-out;
 
                 &-prix {
-                    font-family: $font-texte;
-                    font-size: 0.938rem;
-                    font-weight: 700;
+                    font: 700 $radius-border-buttons $font-texte;
                     position: absolute;
                     bottom: 0;
                     right: 0;
@@ -269,26 +256,18 @@
                 justify-content: center;
                 gap: 0.313rem;
 
+                @media screen and (max-width:361px) {
+                    max-width: 16.875rem;
+                }
+
                 &-text {
-                    font-family: $font-texte;
-                    font-size: 1.125rem;
-                    font-weight: 500;
-                    margin: 0;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
+                    font: 500 1.125rem $font-texte;
+                    @include textes-menu;
                 }
 
                 &-sousText {
-                    font-family: $font-texte;
-                    font-size: 0.938rem;
-                    font-weight: 300;
-                    margin: 0;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-
-
+                    font: 300 $radius-border-buttons $font-texte;
+                    @include textes-menu;
                 }
             }
 
