@@ -53,4 +53,4 @@ Transition fluide pour l'ajout/suppression des favoris
 
 Gestion des menus avec filtres dynamiques
 
-✨ Créé par Alberto Giordani
+Créé par Alberto Giordani
