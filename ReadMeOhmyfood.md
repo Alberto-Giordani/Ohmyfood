@@ -29,7 +29,7 @@ Ohmyfood est un projet de site web permettant aux utilisateurs de découvrir et 
 
 ## 📌 Structure du projet
 
-📂 index.html : Page d'accueil  
+:page_facing_up: index.html : Page d'accueil  
 
 📂 restaurants/ : Pages individuelles des restaurants  
 
