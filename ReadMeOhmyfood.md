@@ -55,12 +55,10 @@ Ohmyfood est un projet de site web permettant aux utilisateurs de découvrir et 
 
 - Animations avancées déclenchées au scroll (apparition fluide des plats)
 
-- Chargement dynamique avec gestion du temps réel
+- Simplification de l'animation avec la fonction *for* de JavaScript
 
-- Transition fluide pour l'ajout/suppression des favoris
-
-- Gestion des menus avec filtres dynamiques
+- Transition plus fluide pour l'ajout/suppression des favoris
 
 ---
 
-Créé par Alberto Giordani
+Créé par **Alberto Giordani**
