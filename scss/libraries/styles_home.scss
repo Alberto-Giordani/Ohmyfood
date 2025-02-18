@@ -135,9 +135,15 @@ h3 {
 
         & p {
             min-width: 19.688rem;
+            max-width: 30rem;
             min-height: 2.875rem;
             font-size: 1.125rem;
             margin: auto;
+
+            @media screen and (min-width: 1280px) {
+                max-width: none;
+            }
+
         }
     }
 }
