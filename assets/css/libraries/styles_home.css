@@ -38,7 +38,7 @@
   }
   100% {
     opacity: 1;
-    z-index: 2;
+    z-index: 1;
   }
 }
 @keyframes spin {
@@ -149,7 +149,7 @@ h3 {
 }
 
 .titrePage {
-  margin: 0 1.25rem 3rem;
+  margin: 0 1.25rem 3.125rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -160,7 +160,8 @@ h3 {
 }
 @media screen and (min-width: 530px) {
   .titrePage {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media screen and (min-width: 1280px) {

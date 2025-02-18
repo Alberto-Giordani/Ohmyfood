@@ -89,7 +89,7 @@ h3 {
 }
 
 .titrePage {
-    margin: 0 1.25rem 3rem;
+    margin: 0 1.25rem 3.125rem;
     @include display__center;
     flex-direction: column;
     height: 17.938rem;
@@ -97,7 +97,8 @@ h3 {
     z-index: 1;
 
     @media screen and (min-width: 530px) {
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     @media screen and (min-width: 1280px) {
