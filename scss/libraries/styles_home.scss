@@ -84,23 +84,21 @@ h3 {
 
 
 ///// Titre /////
-.titreFonctionnementWrapper {
-    margin: 0 1.25rem;
-
-    @media screen and (min-width: 530px) {
-        margin: 0 auto;
-        max-width: 67.5rem;
-    }
+.titreWrapper {
+    background-color: $color-gris-clair;
 }
 
 .titrePage {
-    margin: 0 -1.25rem 3rem;
+    margin: 0 1.25rem 3rem;
     @include display__center;
     flex-direction: column;
     height: 17.938rem;
     position: relative;
-    background-color: $color-gris-clair;
     z-index: 1;
+
+    @media screen and (min-width: 530px) {
+        margin: 0 auto;
+    }
 
     @media screen and (min-width: 1280px) {
         height: 14.75rem;
@@ -146,7 +144,7 @@ h3 {
 
 ///// Fonctionnement /////
 .fonctionnement {
-    margin-bottom: 4.25rem;
+    margin: 0 1.25rem 4.25rem;
     max-width: 30.625rem;
 
     @media screen and (min-width:530px) {
