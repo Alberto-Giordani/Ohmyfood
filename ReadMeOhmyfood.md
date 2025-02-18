@@ -1,56 +1,64 @@
-Ohmyfood
+# Ohmyfood
 
 Ohmyfood est un projet de site web permettant aux utilisateurs de découvrir et de précommander des plats dans des restaurants gastronomiques sélectionnés.
 
-🚀 Fonctionnalités
 
-Interface moderne et responsive
 
-Animations et transitions CSS
+## 🚀 Fonctionnalités
 
-Design mobile-first
+- Interface moderne et responsive
 
-Expérience utilisateur fluide
+- Animations et transitions CSS
 
-🛠️ Technologies utilisées
+- Design mobile-first
 
-HTML5
+- Expérience utilisateur fluide
 
-SASS (SCSS) pour la gestion des styles
 
-Flexbox pour la mise en page
 
-Animations CSS pour les effets visuels
+## 🛠️ Technologies utilisées
 
-📌 Structure du projet
+- HTML5
 
-📂 index.html : Page d'accueil
-📂 restaurants/ : Pages individuelles des restaurants
-📂 assets/css/ : Styles CSS générés à partir de SASS
-📂 assets/scss/ : Fichiers sources SCSS
+- SASS (SCSS) pour la gestion des styles
+
+- Flexbox pour la mise en page
+
+- Animations CSS pour les effets visuels
+
+
+## 📌 Structure du projet
+
+:page_facing_up: index.html : Page d'accueil  
+
+📂 restaurants/ : Pages individuelles des restaurants  
+
+📂 assets/css/ : Styles CSS générés à partir de SASS  
+
+📂 scss/ : Fichiers sources SCSS  
+
 📂 assets/images/ : Ressources graphiques
 
-🎨 Effets graphiques et animations
 
-Loader CSS : Animation de chargement au démarrage
 
-Apparition progressive des éléments : Menus et plats animés en CSS
+## 🎨 Effets graphiques et animations
 
-Effet de survol sur les boutons et favoris
+- Loader CSS : Animation de chargement au démarrage
 
-📌 Améliorations possibles
+- Apparition progressive des éléments : Menus et plats animés en CSS
 
-✅ Backend pour la gestion des commandes
-✅ Réservation en ligne
-✅ Optimisation de l'accessibilité et SEO
-✅ Améliorations possibles avec JavaScript :
+- Effet de survol sur les boutons et favoris
 
-Animations avancées déclenchées au scroll (apparition fluide des plats)
 
-Chargement dynamique avec gestion du temps réel
 
-Transition fluide pour l'ajout/suppression des favoris
+## 📌 Améliorations possibles avec JavaScript :
 
-Gestion des menus avec filtres dynamiques
+- Animations avancées déclenchées au scroll (apparition fluide des plats)
 
-✨ Créé par Alberto Giordani
+- Simplification de l'animation avec la fonction *for* de JavaScript
+
+- Transition plus fluide pour l'ajout/suppression des favoris
+
+---
+
+Créé par **Alberto Giordani**

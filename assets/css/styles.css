@@ -94,6 +94,7 @@ h3 {
   position: relative;
   height: 63px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  z-index: 3;
 }
 .headPage__logo--grand {
   display: none;
@@ -120,6 +121,8 @@ h3 {
   background-color: #EAEAEA;
   font: 500 1rem "Roboto", serif;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 2;
 }
 @media screen and (min-width: 768px) {
   .headPage__localisation {
@@ -144,7 +147,7 @@ h3 {
 .titreFonctionnementWrapper {
   margin: 0 1.25rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 530px) {
   .titreFonctionnementWrapper {
     margin: 0 auto;
     max-width: 67.5rem;
@@ -152,9 +155,20 @@ h3 {
 }
 
 .titrePage {
-  margin: 2.438rem 0 6.563rem;
+  margin: 0 -1.25rem 3rem;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
+  height: 17.938rem;
+  position: relative;
+  background-color: #F6F6F6;
+  z-index: 1;
+}
+@media screen and (min-width: 1280px) {
+  .titrePage {
+    height: 14.75rem;
+  }
 }
 .titrePage__explorer {
   display: flex;
@@ -204,10 +218,10 @@ h3 {
 }
 
 .fonctionnement {
-  margin-bottom: 7.625rem;
+  margin-bottom: 4.25rem;
   max-width: 30.625rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 530px) {
   .fonctionnement {
     margin-left: auto;
     margin-right: auto;
@@ -234,8 +248,7 @@ h3 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  min-width: 20.938rem;
-  position: relative;
+  min-width: 20rem;
 }
 .fonctionnement__explication--part-bouton {
   display: flex;
@@ -243,8 +256,8 @@ h3 {
   margin-left: 0.75rem;
   gap: 1.25rem;
   align-items: center;
-  min-width: 20.156rem;
-  max-width: 30.625rem;
+  min-width: 19.25rem;
+  max-width: 29.875rem;
   width: 100%;
   height: 4.524rem;
   font-size: 1rem;
@@ -296,15 +309,20 @@ h3 {
   margin-bottom: 1.625rem;
 }
 
+.restoWrapper {
+  background-color: #F6F6F6;
+}
+
 .resto {
   display: flex;
   flex-direction: column;
   max-width: 30.625rem;
-  min-width: 21.188rem;
-  margin: 0 1.063rem 4.125rem;
+  min-width: 20rem;
+  margin: 0 1.063rem;
+  padding: 3.375rem 0 4.125rem;
   position: relative;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 530px) {
   .resto {
     margin-left: auto;
     margin-right: auto;
@@ -316,7 +334,10 @@ h3 {
   }
 }
 .resto__titre {
-  margin: 0 0 1rem 0.188rem;
+  margin: 0 0 1.625rem 0.188rem;
+}
+.resto__titre h2 {
+  margin: 0;
 }
 .resto__liste {
   display: flex;
