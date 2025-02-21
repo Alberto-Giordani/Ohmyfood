@@ -2,16 +2,21 @@
 <html lang="fr">
 
 <head>
+    <!-- Métadonnées et liens vers les styles et polices -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ohmyfood</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Liens vers les polices et icônes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/34d72e09e5.js" crossorigin="anonymous"></script>
+
+    <!-- Favicon et manifest -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo/favicon-16x16.png">
@@ -20,17 +25,23 @@
 </head>
 
 <body>
+
+    <!-- Loader: Affiché pendant le chargement de la page -->
     <div class="loader__container">
         <div class="loader__exterieur">
             <div class="loader__interieur"></div>
         </div>
     </div>
 
+    <!-- Contenu principal de la page -->
     <div class="la-page">
+
+        <!-- En-tête du site -->
         <header>
 
             <div class="headPage">
 
+                <!-- Logo: Version petit et grand (adaptation selon la taille de l'écran) -->
                 <div class="headPage__logo">
                     <h1>
                         <img src="assets/images/logo/ohmyfood@2x.svg" alt="Logo de Ohmyfood"
@@ -39,6 +50,7 @@
                     </h1>
                 </div>
 
+                <!-- Champ de localisation -->
                 <div class="headPage__localisation">
                     <label for="localisation"><i class="fa-solid fa-location-dot"></i></label>
                     <input type="text" id="localisation" name="localisation" placeholder="Paris, Belleville">
@@ -46,13 +58,12 @@
 
             </div>
 
-
-
         </header>
 
+        <!-- Contenu principal -->
         <main>
 
-
+            <!-- Section Titre: Introduction et appel à l'action -->
             <div class="titreWrapper">
                 <div class="titrePage">
                     <section class="titrePage__titre">
@@ -67,11 +78,14 @@
                 </div>
             </div>
 
+            <!-- Section Fonctionnement: Explication du processus -->
             <div class="fonctionnement">
                 <section class="fonctionnement__titre">
                     <h2>Fonctionnement</h2>
                 </section>
                 <div class="fonctionnement__explication">
+
+                    <!-- Étape 1 -->
                     <div class="fonctionnement__explication--part">
                         <span class="fonctionnement__explication--part-span">1</span>
                         <button type="button" class="fonctionnement__explication--part-bouton">
@@ -79,6 +93,8 @@
                             <span>Choisissez un restaurant</span>
                         </button>
                     </div>
+
+                    <!-- Étape 2 -->
                     <div class="fonctionnement__explication--part">
                         <span class="fonctionnement__explication--part-span">2</span>
                         <button type="button" class="fonctionnement__explication--part-bouton">
@@ -86,6 +102,8 @@
                             <span>Composez votre menu</span>
                         </button>
                     </div>
+
+                    <!-- Étape 3 -->
                     <div class="fonctionnement__explication--part">
                         <span class="fonctionnement__explication--part-span">3</span>
                         <button type="button" class="fonctionnement__explication--part-bouton">
@@ -96,6 +114,7 @@
                 </div>
             </div>
 
+            <!-- Section Restaurants: Liste des restaurants -->
             <div class="restoWrapper">
                 <div class="resto" id="restaurants">
 
@@ -105,10 +124,14 @@
 
                     <div class="resto__liste">
 
+                        <!-- Chaque ligne contient plusieurs cartes de restaurant -->
                         <div class="resto__liste--ligne">
 
+                            <!-- Carte pour "La palette du goût" -->
                             <a href="restaurants/la_palette.html">
                                 <article class="resto__liste--card">
+
+                                    <!-- Image et badge "Nouveau" -->
                                     <div class="resto__liste--image">
                                         <img src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
                                             alt="Image de La palette du goût" class="resto__liste--image-palette">
@@ -116,11 +139,15 @@
                                             <span>Nouveau</span>
                                         </div>
                                     </div>
+
+                                    <!-- Description du restaurant -->
                                     <div class="resto__liste--description">
                                         <div class="resto__liste--nomEtLieu">
                                             <h3 class="">La palette du goût</h3>
                                             <p class="">Ménilmontant</p>
                                         </div>
+
+                                        <!-- Bouton de favori -->
                                         <div class="resto__liste--favori">
                                             <div class="resto__liste--favori-imageContainer">
                                                 <i class="fa-regular fa-heart image image1"></i>
@@ -133,6 +160,7 @@
                                 </article>
                             </a>
 
+                            <!-- Autre cartes de restaurant... -->
                             <a href="restaurants/la_note.html">
                                 <article class="resto__liste--card">
                                     <div class="resto__liste--image">
@@ -218,6 +246,7 @@
             </div>
         </main>
 
+        <!-- Pied de page -->
         <footer>
             <div class="footer__wrapper">
                 <div class="footer__titre">
@@ -226,25 +255,25 @@
 
                 <div class="footer__contenu">
 
-                    <div class="footer__contenu--ligne">
-                        <div class="footer__contenu--article">
+                    <ul class="footer__contenu--ligne">
+                        <li class="footer__contenu--article">
                             <i class="fa-solid fa-utensils"></i>
                             <a href="#"><span>Proposer un restaurant</span></a>
-                        </div>
-                        <div class="footer__contenu--article">
+                        </li>
+                        <li class="footer__contenu--article">
                             <i class="fa-solid fa-handshake-angle"></i>
                             <a href="#"><span>Devenir partenaire</span></a>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
 
-                    <div class="footer__contenu--ligne">
-                        <div class="footer__contenu--article">
+                    <ul class="footer__contenu--ligne">
+                        <li class="footer__contenu--article">
                             <a href="#"><span>Mentions légales</span></a>
-                        </div>
-                        <div class="footer__contenu--article">
+                        </li>
+                        <li class="footer__contenu--article">
                             <a href="mailto:info@ohmyfood.fr"><span>Contact</span></a>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
 
                 </div>
             </div>

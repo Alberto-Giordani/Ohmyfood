@@ -20,12 +20,20 @@
 </head>
 
 <body>
+
+    <!-- En-tête de la page -->
     <header>
         <div class="headPage">
+
+            <!-- Bannière avec le bouton de retour vers l'accueil et le logo -->
             <div class="headPage__banner">
+
+                <!-- Lien de retour vers la page d'accueil -->
                 <a href="../index.html" class="headPage__banner--fleche">
                     <i class="fa-solid fa-arrow-left"></i>
                 </a>
+
+                <!-- Conteneur du logo avec versions petite et grande (affichées selon la résolution) -->
                 <div class="headPage__banner--logo">
                     <img src="../assets/images/logo/ohmyfood@2x.svg" alt="Logo de Ohmyfood"
                         class="headPage__banner--logo-petit">
@@ -33,6 +41,8 @@
                         class="headPage__banner--logo-grand">
                 </div>
             </div>
+
+            <!-- Image d'en-tête représentant le restaurant -->
             <div class="headPage__image">
                 <img src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
                     alt="Photo du restaurant La palette du goût"
@@ -41,12 +51,21 @@
         </div>
     </header>
 
+    <!-- Contenu principal de la page -->
     <main>
         <div class="main__container">
+
+            <!-- Section titre du restaurant -->
             <section class="titreResto">
+
+                <!-- Nom du restaurant -->
                 <h1>La palette du goût</h1>
+
+                <!-- Bouton favori permettant d'ajouter le restaurant aux favoris -->
                 <div class="titreResto__favori">
                     <div class="titreResto__favori-imageContainer">
+
+                        <!-- Icône de favori vide (régulièrement remplacée par l'icône remplie au survol) -->
                         <i class="fa-regular fa-heart"></i>
                         <div class="titreResto__favori-imageContenue">
                             <i class="fa-solid fa-heart"></i>
@@ -54,23 +73,37 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Section Menu: Entrées -->
             <section class="menuResto">
+
+                <!-- Titre de la section avec soulignement pour la partie "entrées" -->
                 <h2 class="menuResto__titre"><span class="menuResto__titre--underline">entr</span>ées</h2>
                 <ul class="menuResto__liste">
+
+                    <!-- Élément de menu pour une entrée -->
                     <li>
                         <div class="menuResto__liste--element">
                             <div class="menuResto__liste--element-container">
+                                
+                                <!-- Contenu textuel de l'entrée -->
                                 <div class="menuResto__liste--element-contenu">
                                     <h3 class="menuResto__liste--element-contenu-text">Fricassée d'escargots</h3>
                                     <p class="menuResto__liste--element-contenu-sousText">Au piment d'Espelette</p>
                                 </div>
+
+                                <!-- Affichage du prix -->
                                 <div class="menuResto__liste--element-container-prix">25€</div>
                             </div>
+
+                            <!-- Indicateur de sélection pour l'entrée -->
                             <div class="menuResto__liste--element-barre"><i
                                     class="fa-solid fa-circle-check menuResto__liste--element-icone"></i>
                             </div>
                         </div>
                     </li>
+
+                    <!-- Éléments de menu pour les autres entrées... -->
                     <li>
                         <div class="menuResto__liste--element">
                             <div class="menuResto__liste--element-container">
@@ -211,6 +244,7 @@
                 </ul>
             </section>
 
+            <!-- Bouton de commande pour finaliser le choix -->
             <div class="titrePage__explorer">
                 <button type="submit" class="titrePage__explorer--bouton">
                     <span>Commander</span>

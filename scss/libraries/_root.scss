@@ -1,3 +1,8 @@
+/* =====================================================
+   VARIABLES GLOBALES
+   ===================================================== */
+
+// Variables globales pour couleurs, polices et espacements
 $font-titres: 'Shrikhand', serif;
 $font-texte: 'Roboto', serif;
 $color-primaire: #9356DC;
@@ -10,8 +15,11 @@ $gradient-bouton-couleur: linear-gradient(0deg, $color-primaire, $color-secondai
 $radius-border-resto: 2.5rem;
 $radius-border-buttons: 0.938rem;
 
+/* =====================================================
+   ANIMATIONS
+   ===================================================== */
 
-
+// Animation pour faire apparaître un élément avec un effet de glissement
 @keyframes appear {
     0% {
         transform: translateX(1000px);
@@ -32,6 +40,7 @@ $radius-border-buttons: 0.938rem;
     }
 }
 
+// Animation simplifiée pour l'apparition des titres
 @keyframes appear_tete {
     0% {
         transform: translateX(1000px);
@@ -42,6 +51,7 @@ $radius-border-buttons: 0.938rem;
     }
 }
 
+// Animation pour faire disparaître un élément
 @keyframes fadeOut {
     0% {
         opacity: 1;
@@ -54,7 +64,7 @@ $radius-border-buttons: 0.938rem;
     }
 }
 
-
+// Animation pour afficher la page progressivement
 @keyframes showPage {
 
     0% {
@@ -67,6 +77,7 @@ $radius-border-buttons: 0.938rem;
     }
 }
 
+// Animation de rotation pour le loader
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -84,6 +95,7 @@ $radius-border-buttons: 0.938rem;
     }
 }
 
+// Animation pour réduire la largeur d'un texte (effet rétrécissant)
 @keyframes text_reduit {
     0% {
         width: 100%;
@@ -100,6 +112,9 @@ $radius-border-buttons: 0.938rem;
     }
 }
 
+/* =====================================================
+   MIXINS
+   ===================================================== */
 
 @mixin background_i {
     font-size: 1.375rem;
