@@ -1,0 +1,98 @@
+@use "variables" as *;
+
+/* =====================================================
+   ANIMATIONS
+   ===================================================== */
+
+// Animation pour faire apparaître un élément avec un effet de glissement
+@keyframes appear {
+    0% {
+        transform: translateX(1000px);
+    }
+
+    65% {
+        transform: translateX(-40px);
+        width: 70%;
+    }
+
+    85% {
+        transform: translateX(20px);
+        width: 100%;
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+// Animation simplifiée pour l'apparition des titres
+@keyframes appear_tete {
+    0% {
+        transform: translateX(1000px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+// Animation pour faire disparaître un élément
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        z-index: 0;
+    }
+}
+
+// Animation pour afficher la page progressivement
+@keyframes showPage {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        z-index: 1;
+    }
+}
+
+// Animation de rotation pour le loader
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(450deg);
+    }
+
+    100% {
+        transform: rotate(720deg);
+        opacity: 0;
+        visibility: hidden;
+        z-index: 0;
+    }
+}
+
+// Animation pour réduire la largeur d'un texte (effet rétrécissant)
+@keyframes text_reduit {
+    0% {
+        width: 100%;
+    }
+
+    40%,
+    85% {
+        width: 50%;
+        padding-right: 2rem;
+    }
+
+    100% {
+        width: 100%;
+    }
+}

@@ -1,4 +1,6 @@
-@use "root" as *;
+@use "../abstracts/keyframes" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
 
 ///// Général /////
 body {
@@ -207,7 +209,7 @@ h3 {
 ///// Restaurants /////
 .restoWrapper {
     background-color: $color-gris-clair;
-} 
+}
 
 .resto {
     display: flex;

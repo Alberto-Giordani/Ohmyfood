@@ -1,5 +1,6 @@
-@use "root" as *;
-
+@use "../abstracts/keyframes" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
 
 //// Header ///
 .headPage {
@@ -248,7 +249,7 @@
                 gap: 0.313rem;
                 animation: text_reduit 1.5s forwards;
                 @include delays_child;
-                
+
 
                 @media screen and (max-width:361px) {
                     max-width: 16.875rem;
