@@ -20,7 +20,7 @@ Ohmyfood est un projet de site web permettant aux utilisateurs de découvrir et 
 
 - HTML5
 
-- SASS (SCSS) pour la gestion des styles
+- SASS (SCSS) pour la gestion des styles, organisé selon le système 7.1 avec des modules et l'utilisation de `@use`.
 
 - Flexbox pour la mise en page
 
@@ -35,7 +35,9 @@ Ohmyfood est un projet de site web permettant aux utilisateurs de découvrir et 
 
 📂 assets/css/ : Styles CSS générés à partir de SASS  
 
-📂 scss/ : Fichiers sources SCSS  
+📂 scss/ : Fichiers sources SCSS organisés selon le système 7.1
+- abstracts/ : Fichiers utilitaires (ex. : `_variables.scss`, `_mixins.scss`, `_keyframes.scss`)
+- pages/ : Styles spécifiques aux pages (ex. : `_home.scss`, `_resto.scss`)  
 
 📂 assets/images/ : Ressources graphiques
 
@@ -56,8 +58,6 @@ Ohmyfood est un projet de site web permettant aux utilisateurs de découvrir et 
 - Animations avancées déclenchées au scroll (apparition fluide des plats)
 
 - Simplification de l'animation avec la fonction *for* de JavaScript
-
-- Transition plus fluide pour l'ajout/suppression des favoris
 
 ---
 
